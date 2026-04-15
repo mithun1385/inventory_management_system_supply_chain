@@ -1,0 +1,34 @@
+
+POST  http://localhost:4004/odata/v4/inventory-handler/orders
+Content-Type: application/json
+
+{
+  "quantity": 2,
+  "status": "Test",
+  "product_ID": "660e8400-e29b-41d4-a716-446655440002"
+}
+
+###
+GET http://localhost:4004/odata/v4/inventory-handler/products
+
+
+###
+POST http://localhost:4004/odata/v4/inventory-handler/askAI
+Content-Type: application/json
+
+{
+  "query": "show low stock above 1000"
+}
+###
+
+POST http://localhost:4004/odata/v4/inventory-handler/orders
+Content-Type: application/json
+
+{
+  "product_ID": "660e8400-e29b-41d4-a716-446655440006",
+  "quantity": 3
+}
+
+### 
+# get orders details 
+GET http://localhost:4004/odata/v4/inventory-handler/orders

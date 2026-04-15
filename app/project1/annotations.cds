@@ -1,0 +1,1 @@
+using inventoryHandler as service from '../../srv/cat-service';

@@ -1,0 +1,35 @@
+{
+  "name": "inventory_management",
+  "version": "1.0.0",
+  "description": "A simple CAP project.",
+  "dependencies": {
+    "@google/generative-ai": "^0.21.0",
+    "@sap/cds": "^9",
+    "dotenv": "^17.4.0",
+    "express": "^4",
+    "mailparser": "^3.9.6",
+    "nodemailer": "^8.0.4",
+    "openai": "^6.33.0",
+    "smtp-server": "^3.18.3"
+  },
+  "devDependencies": {
+    "@cap-js/sqlite": "^2",
+    "cds-plugin-ui5": "^0.13.0"
+  },
+  "scripts": {
+    "start": "cds-serve",
+    "watch-project1": "cds watch --open project1/index.html?sap-ui-xx-viewCache=false --livereload false"
+  },
+  "cds": {
+    "require": {
+      "db": {
+        "kind": "sqlite",
+        "crendentials": "db/db.sqlite"
+      }
+    }
+  },
+  "private": true,
+  "workspaces": [
+    "app/*"
+  ]
+}
